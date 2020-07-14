@@ -5,9 +5,10 @@
     "main": "index.js",
     "scripts": {
         "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
         "pretty": "prettier --write .",
         "start": "echo 'unable to start the library directly' && exit 1",
-        "version": "standard-version"
+        "release": "standard-version"
     },
     "repository": {
         "type": "git",
@@ -39,35 +40,36 @@
         "@commitlint/cli": "^9.1.1",
         "@commitlint/config-conventional": "^9.1.1",
         "cz-conventional-changelog": "^3.2.0",
-        "eslint": "^6.8.0",
-        "eslint-config-airbnb": "^18.2.0",
+        "eslint": "^7.4.0",
+        "eslint-config-airbnb-base": "^14.2.0",
         "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-import": "^2.22.0",
-        "eslint-plugin-prettier": "^3.1.4",
         "husky": "^4.2.5",
         "prettier": "^2.0.5",
-        "standard-version": "^8.0.1"
-    },
-    "peerDependencies": {
-        "eslint": ">=6.8.0"
-    },
-    "engines": {
-        "node": ">= 6"
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-            "pre-commit": "npm run lint && npm run pretty"
-        }
+        "standard-version": "^8.0.2"
     },
     "config": {
         "commitizen": {
             "path": "cz-conventional-changelog"
         }
     },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "npm run lint:fix && npm run pretty"
+        }
+    },
     "commitlint": {
         "extends": [
             "@commitlint/config-conventional"
         ]
-    }
+    },
+    "peerDependencies": {
+        "eslint": ">=7.4.0",
+        "eslint-plugin-import": "^2.22.0"
+    },
+    "engines": {
+        "node": ">= 6"
+    },
+    "dependencies": {}
 }
