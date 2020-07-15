@@ -43,11 +43,11 @@ install-peerdeps --dev eslint-config-airbnb-base
 
 ## Usage
 
-Add `"extends": "westudents-node"` to your .eslintrc as follows
+Add `"extends": "@westudents/node"` to your .eslintrc as follows
 
 ```json
 {
-    "extends": "@westudents/westudents-node"
+    "extends": "@westudents/node"
 }
 ```
 
@@ -64,4 +64,4 @@ Feel free to add this badge to your README file.
 [npmjs-badge]: https://img.shields.io/npm/v/@westudents/eslint-config-node.svg?logo=npm
 [npmjs-com]: https://www.npmjs.com/package/@westudents/eslint-config-node
 [standard-westudents-badge]: https://img.shields.io/badge/code_style-westudents-orange.svg
-[standard-westudents]: https://github.com/westudents/eslint-config-node
+[standard-westudents]: https://github.com/we-students/eslint-config-node
