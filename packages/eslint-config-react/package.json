@@ -1,0 +1,81 @@
+{
+    "name": "@westudents/eslint-config-react",
+    "version": "1.0.1",
+    "description": "Westudents React JS ESLint config, following our styleguide",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "pretty": "prettier --write .",
+        "start": "echo 'unable to start the library directly' && exit 1",
+        "release": "standard-version"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/we-students/javascript"
+    },
+    "keyword": [
+        "westudents",
+        "eslint",
+        "eslintconfig",
+        "eslint-config",
+        "linter-config",
+        "es2018",
+        "es2019",
+        "es2020",
+        "javascript",
+        "style-guide"
+    ],
+    "homepage": "https://westudents.it",
+    "bugs": {
+        "url": "https://github.com/we-students/javascript/issues",
+        "email": "tech@westudents.it"
+    },
+    "license": "MIT",
+    "author": "Westudents Tech Team <tech@westudents.it>",
+    "contributors": [
+        "Matteo Giardino <matteo.giardino@westudents.it>",
+        "Andriy Klitsuk <andriy.klitsuk@westudents.it>"
+    ],
+    "devDependencies": {
+        "@commitlint/cli": "^9.1.1",
+        "@commitlint/config-conventional": "^9.1.1",
+        "cz-conventional-changelog": "^3.2.0",
+        "eslint": "^7.4.0",
+        "prettier": "^2.0.5",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-import": "^2.22.0",
+        "husky": "^4.2.5",
+        "standard-version": "^8.0.2"
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "npm run lint:fix && npm run pretty"
+        }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "peerDependencies": {
+        "eslint": ">=7.4.0",
+        "prettier": "^2.0.5",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-react": "^7.20.3",
+        "eslint-plugin-react-hooks": "^4.0.7",
+        "eslint-plugin-jsx-a11y": "^6.3.1"
+    },
+    "dependencies": {}
+}
