@@ -1,6 +1,6 @@
 {
     "name": "@westudents/eslint-config-react",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Westudents React JS ESLint config, following our styleguide",
     "main": "index.js",
     "scripts": {
