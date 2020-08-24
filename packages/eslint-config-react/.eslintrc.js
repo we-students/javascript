@@ -8,5 +8,7 @@ module.exports = {
         ecmaVersion: 11,
         sourceType: 'module',
     },
-    rules: {},
+    rules: {
+        "react/jsx-props-no-spreading": 0
+    },
 }
