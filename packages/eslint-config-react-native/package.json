@@ -1,0 +1,76 @@
+{
+  "name": "@westudents/eslint-config-react-native",
+  "version": "1.0.0",
+  "description": "Westudents React Native ESLint config, following our styleguide",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "pretty": "prettier --write .",
+    "start": "echo 'unable to start the library directly' && exit 1",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/we-students/javascript"
+  },
+  "keyword": [
+    "westudents",
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "linter-config",
+    "javascript",
+    "typescript",
+    "style-guide",
+    "react-native"
+  ],
+  "homepage": "https://westudents.it",
+  "bugs": {
+    "url": "https://github.com/we-students/javascript/issues",
+    "email": "tech@westudents.it"
+  },
+  "license": "MIT",
+  "author": "Westudents Tech Team <tech@westudents.it>",
+  "contributors": [
+    "Rocco Luigi Scarcella <roccoluigi.scarcella@westudents.it>"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@react-native-community/eslint-config": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
+  },
+  "config": {
+    "commitizen": {
+        "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+      "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "npm run lint:fix && npm run pretty"
+      }
+  },
+  "commitlint": {
+      "extends": [
+          "@commitlint/config-conventional"
+      ]
+  },
+  "peerDependencies": {
+    "@react-native-community/eslint-config": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  }
+}
